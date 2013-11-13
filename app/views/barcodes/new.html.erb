@@ -1,0 +1,12 @@
+<h1>New Barcode</h1>
+<fieldset>
+    <legend>Add a part</legend>
+<%= simple_form_for(@barcode, html: {class: 'form-horizontal' }) do |f| %>
+  <%= f.input :barcode_number %>
+  <%= f.association :workstation, collection: Workstation.all(order: 'id'), prompt: "Choose a workstation" %>
+  <%= f.hidden_field :job_id, :value => @job.id %>
+  <div class="form-actions">
+   <%= f.button :submit, :class => "btn btn-primary" %>
+   <%= link_to "Cancel", jobs_path, :class => "btn" %>
+   <div>
+<% end %>

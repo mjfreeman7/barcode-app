@@ -1,0 +1,47 @@
+    <div data-role="footer">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#">Summary</a></li>
+            </ul>
+        </div><!-- /navbar -->
+</div><!-- /footer -->
+
+
+<ul data-role="listview" data-inset="true">
+    <li><%= link_to 'Change User', mobile_login_path %>
+
+
+    </li>
+     <li><a href="#">
+	<h1>New Job</h1>
+	       </a>
+    </li>
+    <li><a href="#">
+    	<h1>Open Jobs</h1>
+	       </a>
+    </li>
+    <li><a href="#">
+ 	<h1>Update Job</h1>
+	       </a>
+    </li>
+    <li><a href="#">
+	<h1>View All</h1>
+	       </a>
+    </li>
+    <li><a href="#">
+	<h1>Add User</h1>
+	       </a>
+    </li>
+</ul>
+
+
+<center><h1> Main Menu <h1></center>
+<% if !current_user.nil? %>
+<center><h3> Logged in as: <%= current_user.name %> <%= current_user.barcode_id %> <h3></center>
+	<%= link_to 'Change User', mobile_login_path, :class => "btn btn-primary btn-lg btn-block mob-btn-back-full" %>
+	<%= link_to 'New Job', new_job_path, :class => "btn btn-primary btn-lg btn-block mob-btn-back-full" %>
+	<%= link_to 'Update Job', menu_path, :class => "btn btn-primary btn-lg btn-block mob-btn-back-full" %>
+	<%= link_to 'View Jobs', menu_path, :class => "btn btn-primary btn-lg btn-block mob-btn-back-full" %>
+<% else %>
+	<%= link_to 'Login', mobile_login_path, :class => "btn btn-primary btn-lg btn-block mob-btn-back-full" %>
+<% end %>

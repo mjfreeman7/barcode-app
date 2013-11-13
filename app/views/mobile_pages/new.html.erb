@@ -1,0 +1,9 @@
+
+    	<%= link_to 'Main Menu', menu_path, :class => "btn btn-primary btn-lg btn-block mob-btn-back" %>
+      <br>
+      <%= form_for @job do |f| %>
+      <%= f.text_field :barcode, :class => "form-control mob-input-field", :maxLength => "10", :autofocus => "true", :onKeyUp => "return runScript(event)" %>
+		
+      <br>
+      <%= f.submit "Create Job", :class => "btn btn-primary btn-lg btn-block mob-btn"%>
+  <% end %>

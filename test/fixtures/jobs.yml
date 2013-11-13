@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user_id: 1
+  details: MyString
+  comments: MyString
+  assign_user: MyString
+  importance: MyString
+  barcode: MyString
+  station: MyString
+  status: MyString
+
+two:
+  user_id: 1
+  details: MyString
+  comments: MyString
+  assign_user: MyString
+  importance: MyString
+  barcode: MyString
+  station: MyString
+  status: MyString

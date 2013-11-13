@@ -1,0 +1,12 @@
+<h1>New Job</h1>
+<fieldset>
+    <legend>Create a new job </legend>
+<%= simple_form_for(@job, html: {class: 'form-horizontal' }) do |f| %>
+  <%= f.input :details, :autofocus => true %>
+  <%= f.input :barcode %>
+  <%= f.input :comments %>
+  <div class="form-actions">
+   <%= f.button :submit, :class => "btn btn-primary" %>
+   <%= link_to "Cancel", jobs_path, :class => "btn" %>
+   <div>
+<% end %>

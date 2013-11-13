@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+  <html>
+    <head>
+    <%= stylesheet_link_tag "mobile", media: "all",
+                                           "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "mobile", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
+
+    </head>
+    <body>
+
+      <!-- New Job -->
+      <div id="new_job">
+          <div class="toolbar">
+              <h1>Job</h1>
+              <a class="back" href="#">Home</a>
+          </div>
+          <form class="scroll">
+            <h2>Job Barcode</h2>
+            <ul class="edit rounded">
+                <li><input type="text" name="name" placeholder="Barcode" id="some_name" /></li>
+            </ul>
+            <h2>Part Barcode</h2>
+            <ul class="edit rounded">
+                <li><input type="text" name="name" placeholder="Barcode" id="some_name" /></li>
+            </ul>
+            <a href="#open_job" class="whiteButton">Start</a>
+        </form>
+      </div>
+
+      <!-- Finish Job-->
+      <div id="open_job">
+          <div class="toolbar">
+              <h1>Open Job</h1>
+              <a class="back" href="#">Home</a>
+          </div>
+          <form class="scroll">
+            <h2>Complete Job</h2>
+              <div class="info">
+                  <p> Timer: 0.00s since started.
+              </div>
+            <ul class="rounded">
+              <a href="#home" class="redButton">Finish</a>
+            </ul>
+        </form>
+      </div>
+
+      <!-- Add User -->
+      <div id="add_user">
+          <div class="toolbar">
+              <h1>Add User</h1>
+              <a class="back" href="#">Home</a>
+          </div>
+          <form class="scroll">
+            <h2>Name</h2>
+            <ul class="edit rounded">
+                <li><input type="text" name="name" placeholder="Barcode" id="some_name" /></li>
+            </ul>
+            <h2>Barcode</h2>
+            <ul class="edit rounded">
+                <li><input type="text" name="name" placeholder="Barcode" id="some_name" /></li>
+            </ul>
+            <a href="#home" class="whiteButton">Create</a>
+        </form>
+      </div>
+
+      <!-- Login -->
+      <div id="login">
+          <div class="toolbar">
+              <h1>Login</h1>
+              <a class="back" href="#">Home</a>
+          </div>
+          <form class="scroll">
+            <ul class="edit rounded">
+                <li><input type="text" name="name" placeholder="Barcode" id="some_name" /></li>
+            </ul>
+            <a href="#home" class="whiteButton">Login</a>
+        </form>
+      </div>
+
+      <!-- Lookup -->
+      <div id="lookup">
+          <div class="toolbar">
+              <h1>Lookup</h1>
+              <a class="back" href="#">Home</a>
+          </div>
+          <form class="scroll">
+            <ul class="edit rounded">
+                <li><input type="text" name="name" placeholder="Barcode" id="some_name" /></li>
+            </ul>
+            <a href="#home" class="whiteButton">Find</a>
+        </form>
+      </div>
+
+      <!-- Workstation Select -->
+      <div id="select_station">
+          <div class="toolbar">
+              <h1>Add User</h1>
+              <a class="back" href="#">Home</a>
+          </div>
+          <form class="scroll">
+            <ul class="edit rounded">
+               <li class="arrow">
+                  <select id="ws">
+                      <optgroup label="Select A Workstation">
+                          <option value ="ws1">Workstation 1</option>
+                          <option value ="ws2">Workstation 2</option>
+                          <option value ="ws3">Workstation 3</option>
+                          <option value ="ws4">Workstation 4</option>
+                      </optgroup>
+                  </select>
+              </li>
+            </ul>
+            <a href="#home" class="whiteButton">Set</a>
+        </form>
+      </div>
+
+      <!-- Open Jobs -->
+      <div id="open">
+          <div class="toolbar">
+              <h1>Open</h1>
+              <a href="#" class="back">Back</a>
+          </div>
+          <ul class="edgetoedge scroll">
+              <li class="sep">Open Jobs</li>
+              <li><a href="#">Job 01, <em>#ID</em> <small>OPEN</small></a></li>
+              <li><a href="#">Job 01, <em>#ID</em> <small>OPEN</small></a></li>
+              <li><a href="#">Job 01, <em>#ID</em> <small>OPEN</small></a></li>
+              <li><a href="#">Job 01, <em>#ID</em> <small>OPEN</small></a></li>
+              <li><a href="#">Job 01, <em>#ID</em> <small>OPEN</small></a></li>
+              <li><a href="#">Job 01, <em>#ID</em> <small>OPEN</small></a></li>
+              <li><a href="#">Job 01, <em>#ID</em> <small>OPEN</small></a></li>
+              <li><a href="#">Job 01, <em>#ID</em> <small>OPEN</small></a></li>
+              <li><a href="#">Job 01, <em>#ID</em> <small>OPEN</small></a></li>
+          </ul>
+      </div>
+
+      <!-- Closed Jobs -->
+      <div id="closed">
+          <div class="toolbar">
+              <h1>Closed</h1>
+              <a href="#" class="back">Back</a>
+          </div>
+          <ul class="edgetoedge scroll">
+              <li class="sep">Open Jobs</li>
+              <li><a href="#">Job 01, <em>#ID</em> <small>CLOSED</small></a></li>
+              <li><a href="#">Job 01, <em>#ID</em> <small>CLOSED</small></a></li>
+              <li><a href="#">Job 01, <em>#ID</em> <small>CLOSED</small></a></li>
+              <li><a href="#">Job 01, <em>#ID</em> <small>CLOSED</small></a></li>
+              <li><a href="#">Job 01, <em>#ID</em> <small>CLOSED</small></a></li>
+              <li><a href="#">Job 01, <em>#ID</em> <small>CLOSED</small></a></li>
+              <li><a href="#">Job 01, <em>#ID</em> <small>CLOSED</small></a></li>
+              <li><a href="#">Job 01, <em>#ID</em> <small>CLOSED</small></a></li>
+              <li><a href="#">Job 01, <em>#ID</em> <small>CLOSED</small></a></li>
+          </ul>
+      </div>
+
+      <!-- Main Menu -->
+      <div id="home" class="current">
+          <div class="toolbar">
+              <h1>Barcode UI</h1>
+              <a class="button slideup" id="infoButton" href="#about">About</a>
+          </div>
+
+          <div class="scroll">
+              <ul class="rounded">
+                  <li class="arrow"><a href="#new_job">New Job</a> </li>
+                  <li class="arrow"><a href="#lookup">Barcode Lookup</a> </li>
+              </ul>
+              <!-- Open Jobs Options -->
+              <h2>Jobs</h2>
+              <ul class="rounded">
+                <li class="arrow"><a href="#open">Open Jobs <small class="counter">10</small></a></li>
+                <li class="arrow"><a href="#closed">Closed Jobs <small class="counter">7</small></a> </li>
+              </ul>
+              <!-- Setup Options -->
+              <h2>Setup</h2>
+              <ul class="rounded">
+                <li class="arrow"><a href="#login">Sign In</a> </li>
+                <li class="arrow"><a href="#select_station">Set Workstation</a> </li>
+                <li class="arrow"><a href="#add_user">Create User</a> </li>
+              </ul>
+              <ul class="individual">
+                  <li><a target="_blank" href="#">Change User</a></li>
+                  <li><a target="_blank" href="#">Logout</a></li>
+              </ul>
+              <div class="info">
+                  <p>Signed in as:
+                  <p>Workstation:
+                  <p>
+              </div>
+          </div>
+      </div>
+    </body>
+  </html>

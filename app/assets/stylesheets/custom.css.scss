@@ -1,0 +1,46 @@
+@import "bootstrap";
+
+body {
+  padding-top: 60px;
+  padding-bottom: 40px;
+  padding-left: 20px;
+}
+.sidebar-nav {
+  padding: 9px 0;
+}
+.nav-stacked {
+  padding-top: 15px;
+}
+
+@media (max-width: 980px) {
+  /* Enable use of floated navbar text */
+  .navbar-text.pull-right {
+    float: none;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+.block {
+        border: 1px solid #ccc;
+        background: white;
+        margin: 1em 0em;
+        border-top: none;
+}
+
+.block-content {
+        margin: 1em;
+        min-height: .25em;
+}
+
+.block-header {
+        margin-bottom: 0px;
+        border-right: none;
+        border-left: none;
+        -webkit-border-radius: 0px;
+        -moz-border-radius: 0px;
+        border-radius: 0px;
+}
+.block-header div {
+        padding-top: 10px;
+}

@@ -1,0 +1,41 @@
+<h1>Overview</h1>
+<fieldset>
+    <legend><%= @job.details %></legend><%= link_to "+ Add barcode", new_barcode_path(:job_id => @job.id), :class => "btn btn-success" %>
+<dl class="dl-horizontal">
+  <dt>Added:</dt>
+  <dd><%= time_ago_in_words(@job.created_at) %> ago.</dd>
+  <dt>Created by:</dt>
+  <dd><%= link_to @created_by.name, @created_by %></dd>
+  <dt>First logged:</dt>
+  <dd><%= @job.created_at.localtime %> EST</dd>
+  <dt>Last updated:</dt>
+  <dd><%= @job.updated_at.localtime %> EST</dd>
+  <dt>Barcode</dt>
+  <dd><%= @job.barcode %></dd>
+  <dt>Comments</dt>
+  <dd><%= @job.comments %></dd>
+</dl>
+<fieldset><legend>Parts</legend>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Barcode ID</th>
+      <th>Added</th>
+      <th>Controls</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <% @barcodes.each do |b| %>
+      <td><%= b.barcode_number %></td>
+      <td><%= b.created_at.localtime.to_formatted_s(:short) %></td>
+      <td><%= link_to "", b, method: :delete, data: { confirm: "Are you sure?" }, :class => "btn btn-danger btn-xs fa fa-trash-o" %></td>
+    </tr>
+  </tbody>
+  <% end %>
+</table>
+
+<div class="form-actions">
+   <%= link_to "Edit Job", edit_job_path(@job), :class => "btn btn-lg btn-primary" %>
+   <%= link_to "Back", jobs_path, :class => "btn" %>
+<div>
