@@ -1,28 +1,13 @@
-== README
+The require_tree directive has been removed from the asset pipeline manifest files. Addtional css/js files need to be specified.
+This is to avoid bootstrap/jqtouch css conflicts.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+See: http://guides.rubyonrails.org/asset_pipeline.html
 
-Things you may want to cover:
+Includes:
+- Bootstrap 2.3.0 / pagination gem
+- DataTables
+- SimpleForm (bootstrap 2.3 compatible)
+- Fontawesome
+- jQt (http://jqtjs.com/)
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Mobile site (mobile_pages) uses a seperate layout template. jQt added directly into asset pipeline.
