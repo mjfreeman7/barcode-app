@@ -8,6 +8,7 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
+  <% if current_user %>
  <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container-fluid">
@@ -54,6 +55,10 @@
                 </div>
               </div>
 
-
+<% else %>
+<%= yield %>
+    <%= link_to "Sign Up", signup_path %> or
+    <%= link_to "Log In", login_path %>
+   <% end %>
   </body>
 </html>

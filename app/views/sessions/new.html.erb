@@ -1,14 +1,3 @@
-<% flash.each do |name, msg| %>
-<% if flash[:notice] %>
-	<div class="alert alert-block alert-danger fade in">
-	  <button data-dismiss="alert" class="close close-sm" type="button">
-	      <i class="icon-remove"></i>
-	  </button>
-		<strong>Oops!</strong> <%= content_tag :div, msg, :id => "flash_#{name}" %>
-	</div>
-	<% end %>
-<% end %>
-
 <div class="form-signin">
     <h2 class="form-signin-heading">sign in now</h2>
     <div class="login-wrap">
